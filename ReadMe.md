@@ -61,7 +61,7 @@ To test the code with Anaconda:
 
 &nbsp;&nbsp;&nbsp;&nbsp;   ***conda env create -f RoadSegmentation.yml***
 
-     Note: the versions of dependent libraries are the ones used in our test. User may need to change the version according to your machine.
+     Note: the versions of the dependent libraries are the ones used in our test. User may need to change the version according to your machine.
     
 **Step3.** Activate the environment:
 
