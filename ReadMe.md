@@ -118,7 +118,7 @@ To run the junpternotebook file:
 
 [python-image]: https://img.shields.io/badge/Python-3.x-ff69b4.svg
 [python-url]: https://www.python.org/
-[pytorch-image]: https://img.shields.io/static/v1?label=<Pytorch>&message=<1.12.1>&color=<green>
+[pytorch-image]: https://img.shields.io/static/v1?label=Pytorch&message=1.12.1&color=<green>
 [pytorch-url]: https://pytorch.org/
 [lic-image]: https://img.shields.io/github/license/CosmosYu9/RoadSegmentation
 [lic-url]: #
