@@ -97,7 +97,9 @@ To run the junpternotebook file:
 
 %Load the environment for jupyternotebook
 
-**Step4.** &nbsp; ***jupyter-notebook --notebook-dir=_____***  
+**Step4.** &nbsp; ***jupyter-notebook***
+
+%Run jupyter-notebook in the project directory __/RoadSegmentation/
 
 **Step5.** &nbsp; Open the **roadSeg_Demo.ipynb** file in web browser
 
