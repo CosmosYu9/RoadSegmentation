@@ -1,22 +1,25 @@
-#Version 2023.3
-RoadSegmentator project provides the framework for road segementation in satellite images
-It realizes the two stage road segmentation method proposed in [1] T. Li, M. Comer and J. Zerubia, "A Two-Stage Road Segmentation Approach for Remote Sensing Images, " ICPR2022 workshop
-For the first stage, user can test different nerual networks on road segmentation problem; 
-For the second stage, we can enhance the preliminary segmentation result from stage one by our cunet.
+# 2-Stage RoadSegmentation Approach
 
-#Summary of File:
-    1. Structure of project files;
-    2. Installation; 
-    3. Test with Jupyternotebook file;
-    4. Contact;
-    5. Others.
+[![python-image]][python-url]
 
-#1. Structure of project files:
+This repo aims at implementing the 2-stage road segmentation approach proposed in [1] T. Li, M. Comer and J. Zerubia, "A Two-Stage Road Segmentation Approach for Remote Sensing Images, " ICPR2022 workshop
 
-RoadSegmentator/
+Note: the first stage part can be used to test any semantic road segmentation model build on pytorch (nn.Module).
+
+## Summary of ReadMe
+
+1. Structure of the project
+2. Test with anacoda
+3. Test with Jupyternotebook 
+4. Others
+
+
+## 1. Structure of project
+  ```
+RoadSegmentation/
 │
 ├── ReadMe.md             - introduces RoadSegmentator
-├── xRoadSegmentator.yml  - library dependence
+├── RoadSegmentation.yml  - library dependence
 ├── roadSeg_Demo.ipynb    - Jupyternotebook file to show how to realize road segmentation with RoadSegmentator
 ├── downloadMASS.py       - script to download Massachusetts dataset
 │
@@ -47,37 +50,63 @@ RoadSegmentator/
 │                 └──  <test1>.tif   - test Y image
 │
 └──  output/              - the folder to save test segmentation results
+  ```
+## 2. Test with anacoda
 
+To test the code with Anaconda:
 
-#2. Installation:
+**Step1.** User needs to install [Anaconda](https://www.anaconda.com) first
+
+**Step2.** Then creating an virtual environment with required packages by the command:
+
+&nbsp;&nbsp;&nbsp;&nbsp;   ***conda env create -f RoadSegmentation.yml***
     
-    The code can be with Anaconda(https://www.anaconda.com).
-    User need to install Anaconda(https://www.anaconda.com) first.
-    Then creating an virtual environment with required packages
-    the command: 'conda env create -f RoadSegmentator.yml' will create the environment automatically
-    Then 'source activate RoadSegmentator'
+**Step3.** Activate the environment:
+
+&nbsp;&nbsp;&nbsp;&nbsp;   ***source activate RoadSegmentation***
+    
+**Step4.** Download the test dataset from [Massachusetts](https://www.cs.toronto.edu/~vmnih/data/) by running:
+
+&nbsp;&nbsp;&nbsp;&nbsp;   ***python3.x downloadMASS.py*** 
+    
+    Note: 3.x is user's python version
+    
+**Step5.** Test the full 2-Stage approach by running the demo file:
+
+&nbsp;&nbsp;&nbsp;&nbsp;   ***cd ./source/***
+   
+&nbsp;&nbsp;&nbsp;&nbsp;   ***python3.x testDemo.py***
+   
+    Note: testDemo.py shows a complete test example (include, generate, training, test in 1st stage and 2nd stage respectively) 
+
+## 3. Test with jupyternotebook
+
+A test demo is also presented in **roadSeg_Demo.ipynb**
+
+To run the junpternotebook file:
+
+**Step1.** &nbsp; ***source activate RoadSegmentation***     
+
+%activate the enviornment
+
+**Step2.** &nbsp; ***conda install -c anaconda ipykernel***
+
+**Step3.** &nbsp; ***python -m ipykernel install --user --name=RoadSegmentation***  
+
+%Load the environment for jupyternotebook
+
+**Step4.** &nbsp; ***jupyter-notebook --notebook-dir=_____***  
+
+% __ should be the directory of where RoadSegmentatorlocated, ____/RoadSegmentation
 
 
-#The library dependences are listed in ./RoadSegmentator.yml 
 
 
-#3. Test with Jupyternotebook file
-    step1. conda env create -f RoadSegmentator.yml     %This command create the enviornment
-    step2. conda install -c anaconda ipykernel
-    step3. python -m ipykernel install --user --name=RoadSegmentator       %Load the environment for jupyternotebook
-    Step4. source activate RoadSegmentator
-    Step5. jupyter-notebook --notebook-dir=_____        % __ should be the directory of where RoadSegmentatorlocated, ____/RoadSegmentator
 
 
-#4. Contact:
-If you have any questions about our work or code, please send Tianyu an email at cosmos.yu9@gmail.com
-
-
-#Others: Download test dataset
-    To download the Massachusetts dataset, need run file ./tools/mulLinkDown.py with python
-    Need library mechanize: conda install -c conda-forge mechanize
-                 requests: conda install -c conda-forge requests
-    Then the MASS data should be saved in file directory: ./data/
-
-#conda install scikit-image
-#conda install torchvision
+[python-image]: https://img.shields.io/badge/Python-3.x-ff69b4.svg
+[python-url]: https://www.python.org/
+[pytorch-image]: https://img.shields.io/badge/PyTorch-1.3-2BAF2B.svg
+[pytorch-url]: https://pytorch.org/
+[lic-image]: https://img.shields.io/badge/Apache-2.0-blue.svg
+[lic-url]: #
