@@ -1,6 +1,8 @@
 # 2-Stage RoadSegmentation Approach
 
 [![python-image]][python-url]
+[![pytorch-image]][pytorch-url]
+[![lic-image]][lic-url]
 
 This repo aims at implementing the 2-stage road segmentation approach proposed in [1] T. Li, M. Comer and J. Zerubia, "A Two-Stage Road Segmentation Approach for Remote Sensing Images, " ICPR2022 workshop
 
