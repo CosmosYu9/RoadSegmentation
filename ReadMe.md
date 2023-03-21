@@ -97,9 +97,7 @@ To run the junpternotebook file:
 
 **Step4.** &nbsp; ***jupyter-notebook --notebook-dir=_____***  
 
-% __ should be the directory of where RoadSegmentatorlocated, ____/RoadSegmentation
-
-
+**Step5.** &nbsp; Open the **roadSeg_Demo.ipynb** file in web browser
 
 
 
