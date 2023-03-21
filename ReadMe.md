@@ -103,6 +103,8 @@ To run the junpternotebook file:
 
 **Step5.** &nbsp; Open the **roadSeg_Demo.ipynb** file in web browser
 
+%Make sure the kernel is RoadSegmentation (can be set in the Kernel button)
+
 
 
 
