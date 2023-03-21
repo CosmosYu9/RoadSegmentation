@@ -49,7 +49,7 @@ RoadSegmentation/
 │           └── TestY/    - folder of test Y images
 │                 └──  <test1>.tif   - test Y image
 │
-└──  output/              - the folder to save test segmentation results
+└── output/              - the folder to save test segmentation results
   ```
 ## 2. Test with anacoda
 
