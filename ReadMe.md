@@ -69,7 +69,13 @@ To test the code with Anaconda:
     
 **Step4.** Download the test dataset from [Massachusetts](https://www.cs.toronto.edu/~vmnih/data/) by running:
 
-&nbsp;&nbsp;&nbsp;&nbsp;   ***python3.x downloadMASS.py*** 
+Install two packages mechanize and requests first:
+
+mechanize: ***conda install -c conda-forge mechanize***
+
+requests:  ***conda install -c conda-forge requests***
+
+Then run &nbsp;&nbsp;&nbsp;&nbsp;   ***python3.x downloadMASS.py*** 
     
     Note: 3.x is user's python version
     
